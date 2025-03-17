@@ -6,3 +6,4 @@ function changeText() {
 
     document.querySelector(".container").style.backgroundColor = randomColor;
 }
+
