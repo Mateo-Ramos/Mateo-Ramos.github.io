@@ -42,16 +42,18 @@ a:hover {
 table {
     width: 100%;
     margin-top: 20px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     background-color: #252525;
+    border-radius: 8px;
+    overflow: hidden;
 }
 table, th, td {
     border: 1px solid #444;
 }
 th, td {
     padding: 12px;
-    text-align: center;
-    color: #e0e0e0;
+    border-bottom: 1px solid #444;
 }
 th {
     background-color: #333;
@@ -87,4 +89,14 @@ button {
 }
 button:hover{ 
     background-color: #0056b3;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 600px) {
+    .profile-image { 
+        flex-display: block;
+        margin: 10px auto;
+        width: 70px;
+    }
 }
