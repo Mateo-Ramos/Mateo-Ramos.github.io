@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function fetchNews() {
     const apiKey = "32f8379affe8459eaebadba0b6cc8936";
     const category = "general"
-    const url = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${apiKey}&country=us`;
+    const url = `https://newsapi.org/v2/top-headlines?category=technology&apiKey=${apiKey}&country=us`;
 
     fetch(url)
         .then(response => response.json())
@@ -46,3 +46,12 @@ function displayNews(articles) {
         newsContainer.innerHTML += newsCard;
     });
 }
+
+const url = `https://api.allorigins.win/get?url=${encodeURIComponent("https://newsapi.org/v2/top-headlines?category=technology&apiKey=TU_API_KEY&country=us")}`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+      console.log(JSON.parse(data.contents)); // Muestra las noticias sin bloqueos
+  })
+  .catch(error => console.error("Error:", error));
