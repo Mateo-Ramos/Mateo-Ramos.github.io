@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function fetchNews() {
     const apiKey = "32f8379affe8459eaebadba0b6cc8936";
-    const category = "sports"
-    const url = 'https://newsapi.org/v2/top-headlines?headlines?category=${category}&apiKey=${apiKey}&country=us';
+    const category = "general"
+    const url = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${apiKey}&country=us`;
 
     fetch(url)
         .then(response => response.json())
